@@ -1,1 +1,2 @@
-LOGS FROM OPENWRT HERE
+Use this to get logs file from OpenWRT:
+https://openwrt.org/docs/guide-user/base-system/log.essentials#network_logging
