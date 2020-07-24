@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <title>Network Stats</title>
+    <link rel="stylesheet" href="net_stats.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bars">
+            <div class="top-bar-borders" id="top-bar-borders-1">
+                <table id="top-bar-menu-1">
+                    <tr>                    
+                        <td id="title"><a>Total Queries</a></td>
+                        <td rowspan="2" id="img-1"></td>
+                    </tr>
+                    <tr>
+                        <td id="stat"><a id="totaljava"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="top-bar-borders" id="top-bar-borders-2">
+                <table id="top-bar-menu-1">
+                    <tr>
+                        <td id="title"><a>Queries Blocked</a></td>
+                        <td rowspan="2" id="img-2"></td>
+                    </tr>
+                    <tr>
+                        <td id="stat"><a id="blockedjava"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="top-bar-borders" id="top-bar-borders-3">
+                <table id="top-bar-menu-1">
+                    <tr>
+                        <td id="title"><a>Percent Blocked</a></td>
+                        <td rowspan="2" id="img-3"></td>
+                    </tr>
+                    <tr>
+                        <td id="stat"><a id="percentjava"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="top-bar-borders" id="top-bar-borders-4">
+                <table id="top-bar-menu-1">
+                    <tr>
+                        <td id="title"><a>Top User</a></td>
+                        <td rowspan="2" id="img-4"></td>
+                    </tr>
+                    <tr>
+                        <td id="stat"><a id="namejava"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <table id="list-1" class="list-table">
+                <tr>
+                    <td class="list-title" style="width:75%;"><a id="list-title">Allowed Domains</a></td>
+                    <td class="list-title" style="width:25%;"><a id="list-title">Hits</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="a"></a></td>
+                    <td class="list-item"><a class="am"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="a"></a></td>
+                    <td class="list-item"><a class="am"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="a"></a></td>
+                    <td class="list-item"><a class="am"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="a"></a></td>
+                    <td class="list-item"><a class="am"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="a"></a></td>
+                    <td class="list-item"><a class="am"></a></td>
+                </tr>
+            </table>
+            <table class="list-table" id="list-2">
+                <tr>
+                    <td class="list-title" style="width:75%;"><a id="list-title">Blocked Domains</a></td>
+                    <td class="list-title" style="width:25%;"><a id="list-title">Hits</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="b"></a></td>
+                    <td class="list-item"><a class="bm"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="b"></a></td>
+                    <td class="list-item"><a class="bm"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="b"></a></td>
+                    <td class="list-item"><a class="bm"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="b"></a></td>
+                    <td class="list-item"><a class="bm"></a></td>
+                </tr>
+                <tr>
+                    <td class="list-item"><a class="b"></a></td>
+                    <td class="list-item"><a class="bm"></a></td>
+                </tr>
+            </table>
+            <table id="menu-bar">
+                <tr>
+                    <td class="button"><button class="button-text" id="button-left" onClick ="javascript:showRealTime();" style="display:block;">Real Time Traffic</button></td>
+                    <td class="button"><button class="button-text" id="button-right" onClick ="javascript:showChart();" style="display:block;">Last 12 Hours</button></td>
+                </tr>
+            </table>
+            <table id="chart">
+                <tr>
+                   <td id="chart-img"></td>
+                </tr>
+            </table>
+            <table id="real-time-list">
+                <tr>
+                    <td class="list-title" style="width:10%"><a>Time</a></td>
+                    <td class="list-title" style="width:55%"><a>Domain</a></td>
+                    <td class="list-title" style="width:15%"><a>User</a></td>
+                    <td class="list-title" style="width:20%"><a>Status</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+				                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+				                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+				                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+				                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+				                <tr>
+                    <td class="list-item" style="width:10%"><a class="rt">Time</a></td>
+                    <td class="list-item" style="width:55%"><a class="rd">Domain</a></td>
+                    <td class="list-item" style="width:15%"><a class="ru">User</a></td>
+                    <td class="list-item" style="width:20%"><a class="rs">Status</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="net-stats.js"></script>
+</body>
+</html>
