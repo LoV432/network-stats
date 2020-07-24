@@ -8,7 +8,6 @@ values_dict = {}
 
 # Get all times
 time = datetime.datetime.now()
-time = time - datetime.timedelta(hours= 15)
 date = time.strftime("%Y-%b-%d")
 current_time = time.strftime("%H:%M:%S")
 
@@ -54,5 +53,5 @@ COLOR = 'white'
 plt.rcParams['xtick.color'] = COLOR
 plt.rcParams['ytick.color'] = COLOR
 plt.rcParams['axes.edgecolor'] = COLOR
-plt.bar(names, values)
+plt.bar(names[::-1], values[::-1])
 plt.savefig("img/img", dpi=150, transparent=True)
