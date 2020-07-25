@@ -10,6 +10,7 @@ try:
     c.execute("SELECT * FROM Top_Blocked")
 except:
     main.create_database()
+    print("Database Created")
 
 #Get Year for sorting data later
 time = datetime.datetime.now()
@@ -51,7 +52,7 @@ for x in allLogs:
             # Create date
             x[0] = year + "-" + x[0] + "-" + x[1]
 
-            insert.append((x[0],x[1],x[2],x[3],x[8],x[10]))
+            insert.append((x[0],x[2],x[3],x[8],x[10]))
         else:
             x = x.replace("OpenWrt", "Allowed")
             name_convert()
@@ -60,7 +61,7 @@ for x in allLogs:
             # Create date
             x[0] = year + "-" + x[0] + "-" + x[1]
 
-            insert.append((x[0],x[1],x[2],x[3],x[8],x[10]))
+            insert.append((x[0],x[2],x[3],x[8],x[10]))
 
 
 main.all_data(insert)

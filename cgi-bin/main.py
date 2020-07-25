@@ -5,12 +5,10 @@ db = "stats.db"
 # Create database
 def create_database():
     conn = sqlite3.connect(db)
-
     c = conn.cursor()
 
     c.execute(""" CREATE TABLE allLogs (
         Date text,
-        Day text,
         Time text,
         Status text,
         Domain text,
@@ -20,6 +18,7 @@ def create_database():
     c.execute("CREATE TABLE Top_Allowed (Domain text, Hits text)")
     c.execute("CREATE TABLE Top_Blocked (Domain text, Hits text)")
     c.execute("CREATE TABLE Top_User (Name text, Hits text)")
+    conn.close()
 
 # insert all data from logs.txt
 def all_data(insert):
@@ -28,7 +27,7 @@ def all_data(insert):
     c = conn.cursor()
 
     #Add data to database
-    c.executemany("INSERT INTO allLogs VALUES (?,?,?,?,?,?)", insert)
+    c.executemany("INSERT INTO allLogs VALUES (?,?,?,?,?)", insert)
 
     #save database and close
     conn.commit()
