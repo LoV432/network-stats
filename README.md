@@ -1,6 +1,12 @@
 ### Installing
 
-Frist turn on network logging from OpenWRT
+First install adblock on OpenWRT
+
+```
+https://openwrt.org/docs/guide-user/services/ad-blocking
+```
+
+Then turn on network logging from OpenWRT
 
 ```
 https://openwrt.org/docs/guide-user/base-system/log.essentials#network_logging
