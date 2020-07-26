@@ -8,6 +8,7 @@ try:
     conn = sqlite3.connect(main.db)
     c = conn.cursor()
     c.execute("SELECT * FROM Top_Blocked")
+    conn.close()
 except:
     main.create_database()
     print("Database Created")
