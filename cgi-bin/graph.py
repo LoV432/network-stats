@@ -30,9 +30,7 @@ for x in range(12):
 
     #Once searched use loop to count all entry
     list = c.fetchall()
-    for x in list:
-        #print(x)
-        count += 1
+    count = len(list)
     
     #add it to values_dict
     hour = hour.replace("%", "")
