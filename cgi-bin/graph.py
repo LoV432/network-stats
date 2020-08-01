@@ -9,7 +9,8 @@ values_dict = {}
 
 # Get all times
 time = datetime.datetime.now()
-date = time.strftime("%Y-%b-%d")
+#--------------------------------.replace to remove 0 padding from day
+date = time.strftime("%Y-%b-X%d").replace('X0','X').replace('X','')
 current_time = time.strftime("%H:%M:%S")
 
 
