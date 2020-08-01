@@ -43,6 +43,9 @@ count = 0
 for x in allLogs:
     count += 1
     if x.find("query") > -1 and x.find(".lan") == -1:
+        
+        # Fix for when day is in single digit.....Dis what u get for using split so much nub
+        x = x.replace("  ", " ")
 
         # When Query found...check next line to find NXDOMAIN 
         if allLogs[count].find("NXDOMAIN") > -1:
