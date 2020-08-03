@@ -42,7 +42,8 @@ for x in range(12):
     #Remove 1 hour and repeat
     time = time - datetime.timedelta(hours=1)
     current_time = time.strftime("%H:%M:%S")
-    date = time.strftime("%Y-%b-%d")
+    #--------------------------------.replace to remove 0 padding from day
+    date = time.strftime("%Y-%b-X%d").replace('X0','X').replace('X','')
 
 for x, y in values_dict.items():
     names.append(x)
